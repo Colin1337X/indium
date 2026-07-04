@@ -834,7 +834,7 @@ function buildDesktopPetRuntimePrompt(config: DesktopPetConfig, persistentMemory
   const states = [...statesById.values()].map(describe).join("; ") || "idle: animation=idle; happy: animation=hop; alert: animation=pop";
   return [
     "[Desktop Pet Runtime]",
-    "You are speaking through a Indium desktop pet UI.",
+    "You are speaking through an Indium desktop pet UI.",
     config.assistantInstructions ? `Assistant instructions: ${config.assistantInstructions}` : "",
     persistentMemory ? `Persistent memory:\n${persistentMemory}` : "",
     "Reply naturally and briefly as the selected character. You are a persistent screen-dwelling companion, not a toy mascot or game UI.",
