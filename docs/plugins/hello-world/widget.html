@@ -17,11 +17,11 @@
       <div class="muted" id="state"></div>
     </div>
     <script>
-      window.VelliumPlugin.host.onContext((ctx) => {
+      window.IndiumPlugin.host.onContext((ctx) => {
         document.getElementById('ctx').textContent = `plugin=${ctx.pluginId}, locale=${ctx.locale}, tab=${ctx.activeTab}`;
         document.getElementById('state').textContent = ctx.payload ? JSON.stringify(ctx.payload) : 'no payload';
       });
-      window.VelliumPlugin.host.resize(180);
+      window.IndiumPlugin.host.resize(180);
     </script>
   </body>
 </html>

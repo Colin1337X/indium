@@ -1,6 +1,6 @@
 # Writing
 
-`Writing` in Vellium is a dedicated workspace for long-form text, books, scenes, and writing-specific AI flows. It is not just another chat window.
+`Writing` in Indium is a dedicated workspace for long-form text, books, scenes, and writing-specific AI flows. It is not just another chat window.
 
 The screenshot below shows the `Simple Mode` writing workspace, which is the cleaner option for first-time use.
 
@@ -52,7 +52,7 @@ Writing supports at least two meaningful modes:
 
 ## Projects, Chapters, and Scenes
 
-In `Books`, Vellium lets you:
+In `Books`, Indium lets you:
 
 - create and rename projects
 - delete books, chapters, and scenes
@@ -164,7 +164,7 @@ Writing supports:
 - `Export MD`
 - `Export DOCX`
 
-On import, Vellium offers parsing modes such as:
+On import, Indium offers parsing modes such as:
 
 - `Auto`
 - `Chapter markers`
@@ -177,7 +177,7 @@ That matters because incoming manuscripts can have very different structures.
 
 This mode is useful when:
 
-- you are moving an existing manuscript into Vellium
+- you are moving an existing manuscript into Indium
 - the source document should become its own project
 - you do not want to merge the import into an already active book
 

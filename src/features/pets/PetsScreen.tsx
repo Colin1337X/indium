@@ -153,19 +153,19 @@ function createBlankPetCard(name: string) {
       name,
       description: "",
       personality: "A small desktop companion: attentive, warm, curious, and quick to react to clicks and short messages.",
-      scenario: "Lives on the user's desktop as a Vellium Pet and keeps them company while they work.",
+      scenario: "Lives on the user's desktop as an Indium Pet and keeps them company while they work.",
       first_mes: "I'm here.",
       tags: [PET_TAG],
       system_prompt: "Stay in character as a desktop companion. Keep replies short, reactive, and emotionally present.",
       mes_example: "",
-      creator_notes: "Created from Vellium Pets.",
+      creator_notes: "Created from Indium Pets.",
       alternate_greetings: [],
       post_history_instructions: "",
-      creator: "Vellium",
+      creator: "Indium",
       character_version: "pet",
       creator_notes_multilingual: {},
       extensions: {
-        velliumPet: {
+        indiumPet: {
           spriteUrl: "",
           spriteSheetUrl: "",
           scale: 1,
@@ -192,8 +192,8 @@ function createCodexPetCard(manifest: CodexPetManifest, spriteSheetUrl: string) 
     data: {
       name,
       description,
-      personality: description || "A compact Codex-style desktop pet adapted for Vellium.",
-      scenario: "Lives on the user's desktop as a Vellium Pet and reacts through a Codex pet spritesheet.",
+      personality: description || "A compact Codex-style desktop pet adapted for Indium.",
+      scenario: "Lives on the user's desktop as an Indium Pet and reacts through a Codex pet spritesheet.",
       first_mes: "I'm here.",
       tags: [PET_TAG],
       system_prompt: "Stay in character as a desktop companion. Keep replies short, reactive, and emotionally present.",
@@ -201,11 +201,11 @@ function createCodexPetCard(manifest: CodexPetManifest, spriteSheetUrl: string) 
       creator_notes: "Imported from a Codex pet manifest.",
       alternate_greetings: [],
       post_history_instructions: "",
-      creator: "Vellium",
+      creator: "Indium",
       character_version: "codex-pet",
       creator_notes_multilingual: {},
       extensions: {
-        velliumPet: {
+        indiumPet: {
           spriteUrl: "",
           spriteSheetUrl,
           scale: 1,

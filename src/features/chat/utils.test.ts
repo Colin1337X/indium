@@ -30,7 +30,7 @@ describe("reasoning display normalization", () => {
 
 describe("tool result display parsing", () => {
   const rawResult = JSON.stringify({
-    kind: "vellium_media_result",
+    kind: "indium_media_result",
     summary: "Image created and shown to the user.",
     media: [{
       type: "image",

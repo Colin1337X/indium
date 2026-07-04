@@ -834,7 +834,7 @@ function buildDesktopPetRuntimePrompt(config: DesktopPetConfig, persistentMemory
   const states = [...statesById.values()].map(describe).join("; ") || "idle: animation=idle; happy: animation=hop; alert: animation=pop";
   return [
     "[Desktop Pet Runtime]",
-    "You are speaking through a Vellium desktop pet UI.",
+    "You are speaking through an Indium desktop pet UI.",
     config.assistantInstructions ? `Assistant instructions: ${config.assistantInstructions}` : "",
     persistentMemory ? `Persistent memory:\n${persistentMemory}` : "",
     "Reply naturally and briefly as the selected character. You are a persistent screen-dwelling companion, not a toy mascot or game UI.",
@@ -2325,7 +2325,7 @@ app.whenReady().then(() => {
     app.dock?.hide();
     void startProductionServer()
       .then(() => {
-        console.log(`Vellium headless mode running at ${formatServerUrl({ host: SERVER_HOST, port: SERVER_PORT })}`);
+        console.log(`Indium headless mode running at ${formatServerUrl({ host: SERVER_HOST, port: SERVER_PORT })}`);
       })
       .catch((error) => {
         console.error("Failed to start headless server:", error);
@@ -2336,7 +2336,7 @@ app.whenReady().then(() => {
   void createWindow().catch((error) => {
     console.error("Failed to create main window:", error);
     const message = error instanceof Error ? error.stack || error.message : String(error);
-    dialog.showErrorBox("Vellium startup error", message);
+    dialog.showErrorBox("Indium startup error", message);
     app.quit();
   });
 });

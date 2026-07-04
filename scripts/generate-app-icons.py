@@ -24,12 +24,12 @@ def draw_icon() -> Image.Image:
     draw.rounded_rectangle(
         (48, 48, 976, 976),
         radius=220,
-        fill=(217, 119, 87, 255),
+        fill=(45, 212, 191, 255),
     )
     draw.rounded_rectangle(
         (48, 48, 976, 976),
         radius=220,
-        outline=(246, 193, 171, 170),
+        outline=(94, 234, 212, 170),
         width=8,
     )
 

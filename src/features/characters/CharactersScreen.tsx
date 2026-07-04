@@ -14,7 +14,7 @@ import {
 } from "../../shared/backgroundTasks";
 
 const ALT_GREETING_SEPARATOR = "\n\n---\n\n";
-const HERO_AGENT_EXTENSION_KEY = "vellium_agent";
+const HERO_AGENT_EXTENSION_KEY = "indium_agent";
 type CharacterEditorKind = "standard" | "agent";
 
 function buildEmptyHeroSkill(index = 0): AgentHeroSkill {

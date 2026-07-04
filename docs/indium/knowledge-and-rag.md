@@ -1,6 +1,6 @@
 # Knowledge and RAG
 
-`Knowledge` is Vellium's retrieval layer: collections, documents, and the later use of those documents in `Chat` and `Writing`.
+`Knowledge` is Indium's retrieval layer: collections, documents, and the later use of those documents in `Chat` and `Writing`.
 
 ![Knowledge workspace](./assets/knowledge-workspace.png)
 
@@ -24,7 +24,7 @@ If you need keyword-triggered prompt injection, that is usually a `LoreBook` job
 
 ## Collection scope
 
-Each collection in Vellium has a scope:
+Each collection in Indium has a scope:
 
 - `global`
 - `chat`
@@ -109,7 +109,7 @@ The big advantage is separation: the manuscript and the knowledge base remain di
 
 ## Reranker
 
-Vellium supports optional cross-encoder reranking through an OpenAI-compatible `/rerank` endpoint.
+Indium supports optional cross-encoder reranking through an OpenAI-compatible `/rerank` endpoint.
 
 Use it when:
 

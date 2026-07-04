@@ -1,12 +1,12 @@
 # Settings and Providers
 
-`Settings` in Vellium is not just a preferences page. It is the routing center for models, UI behavior, context policies, security policies, plugins, and MCP.
+`Settings` in Indium is not just a preferences page. It is the routing center for models, UI behavior, context policies, security policies, plugins, and MCP.
 
 ![Provider and routing settings](./assets/settings-providers.png)
 
 ## Settings categories
 
-Vellium groups settings into large categories:
+Indium groups settings into large categories:
 
 | Category | What is inside |
 | --- | --- |
@@ -45,7 +45,7 @@ If no preset fits, configure the provider manually. Typical fields include:
 
 ### Provider types
 
-Vellium distinguishes between:
+Indium distinguishes between:
 
 - `OpenAI-compatible`
 - `KoboldCpp`
@@ -61,7 +61,7 @@ If the active model is not assigned, the main flows are incomplete.
 
 ## Separate models for separate jobs
 
-Vellium can keep separate models or providers for:
+Indium can keep separate models or providers for:
 
 - translation
 - context compression
@@ -69,7 +69,7 @@ Vellium can keep separate models or providers for:
 - embeddings / RAG
 - reranking
 
-This is one of the biggest advantages of Vellium as a workbench: one endpoint does not have to do everything.
+This is one of the biggest advantages of Indium as a workbench: one endpoint does not have to do everything.
 
 ## Runtime mode and local-only policy
 
@@ -83,7 +83,7 @@ This matters most in private, local, or self-hosted deployments.
 
 ## Backends
 
-The `Backends` section exists for users who want Vellium to help manage locally launched backend processes.
+The `Backends` section exists for users who want Indium to help manage locally launched backend processes.
 
 From the code and UI structure, this section is built around:
 
@@ -104,7 +104,7 @@ The `Interface` section usually contains:
 - plugin theme
 - Simple Mode / workspace mode
 
-If several people use Vellium on the same machine, it is worth defining these early.
+If several people use Indium on the same machine, it is worth defining these early.
 
 ## Generation
 
@@ -137,7 +137,7 @@ This section controls the system layer of generation:
 - prompt stack
 - default system prompts
 
-The Vellium prompt stack uses blocks such as:
+The Indium prompt stack uses blocks such as:
 
 - `system`
 - `jailbreak`
@@ -174,7 +174,7 @@ The security block controls at least:
 - remote image policy
 - unsafe upload policy
 
-This directly affects how Vellium renders model-generated Markdown and handles external resources.
+This directly affects how Indium renders model-generated Markdown and handles external resources.
 
 ### Plugins
 
@@ -190,7 +190,7 @@ From `Settings -> Plugins` you can:
 
 ### MCP Functions
 
-This block is where Vellium:
+This block is where Indium:
 
 - loads function definitions from configured MCP servers
 - groups them by server

@@ -6,8 +6,8 @@ export type Locale = "en" | "ru" | "zh" | "ja";
 export const translations = {
   en: {
     // App
-    "app.name": "Vellium",
-    "welcome.title": "Welcome to Vellium",
+    "app.name": "Indium",
+    "welcome.title": "Welcome to Indium",
     "welcome.subtitle": "Let's configure the basics for your first launch.",
     "welcome.interfaceLanguage": "Interface Language",
     "welcome.responseLanguage": "Response Language",
@@ -35,7 +35,7 @@ export const translations = {
     "welcome.presetSkipHint": "No provider will be created now. You can add one later in Settings.",
     "welcome.presetSetupFailed": "Provider preset setup failed",
     "welcome.setupBadge": "Setup",
-    "welcome.finish": "Start Using Vellium",
+    "welcome.finish": "Start Using Indium",
     "welcome.saving": "Saving...",
 
     // Tabs
@@ -189,7 +189,7 @@ export const translations = {
     "agents.newAskThreadDefault": "Ask Workspace",
     "agents.newBuildThreadDefault": "Build Workspace",
     "agents.newResearchThreadDefault": "Research Workspace",
-    "agents.defaultSystemPrompt": "You are Vellium Agent, a first-party autonomous operator inside Vellium. Be concise, execution-focused, and explicit about uncertainty.",
+    "agents.defaultSystemPrompt": "You are Indium Agent, a first-party autonomous operator inside Indium. Be concise, execution-focused, and explicit about uncertainty.",
     "agents.threadCreated": "Agent thread created",
     "agents.threadSaved": "Agent thread saved",
     "agents.threadDeleted": "Agent thread deleted",
@@ -796,7 +796,7 @@ export const translations = {
     "chars.agentInstructionsPlaceholder": "Set how this hero should plan, answer, delegate, and use tools inside the Agents workspace.",
     "chars.agentSkills": "Hero Skills",
     "chars.agentSkillsCount": "skills",
-    "chars.agentSkillsEmpty": "No hero-specific skills yet. Add a few focused skills if this agent should behave differently from the default Vellium runtime.",
+    "chars.agentSkillsEmpty": "No hero-specific skills yet. Add a few focused skills if this agent should behave differently from the default Indium runtime.",
     "chars.agentWorkspaceSummaryDesc": "This profile seeds linked workspaces with its own mode, memory, and hero-specific skills.",
     "chars.agentEditorHintTitle": "Agent-first setup",
     "chars.agentEditorHint": "This profile is being shaped for the Agents workspace.",
@@ -984,8 +984,8 @@ export const translations = {
     "settings.pluginPermissionsEnableHint": "Save the permission grants first. The plugin will be enabled right after that.",
     "settings.pluginPermissionsRuntimeHint": "You can revoke permissions later. Restricted permissions immediately block matching plugin APIs.",
     "settings.pluginPermissionDenied": "denied",
-    "settings.pluginPermissionHelp.api.read": "Read-only access to Vellium API routes.",
-    "settings.pluginPermissionHelp.api.write": "Write access to Vellium API routes. Needed for mutating chats, characters, lorebooks, providers and similar data.",
+    "settings.pluginPermissionHelp.api.read": "Read-only access to Indium API routes.",
+    "settings.pluginPermissionHelp.api.write": "Write access to Indium API routes. Needed for mutating chats, characters, lorebooks, providers and similar data.",
     "settings.pluginPermissionHelp.pluginSettings.read": "Allows the plugin to read its own stored settings.",
     "settings.pluginPermissionHelp.pluginSettings.write": "Allows the plugin to write its own stored settings.",
     "settings.pluginPermissionHelp.host.resize": "Allows the plugin to request iframe height changes for embedded UI.",
@@ -1327,8 +1327,8 @@ export const translations = {
   },
   ru: {
     // App
-    "app.name": "Vellium",
-    "welcome.title": "Добро пожаловать в Vellium",
+    "app.name": "Indium",
+    "welcome.title": "Добро пожаловать в Indium",
     "welcome.subtitle": "Давайте настроим базовые параметры для первого запуска.",
     "welcome.interfaceLanguage": "Язык интерфейса",
     "welcome.responseLanguage": "Язык ответов",
@@ -1356,7 +1356,7 @@ export const translations = {
     "welcome.presetSkipHint": "Провайдер сейчас не создаётся. Позже можно добавить в Настройках.",
     "welcome.presetSetupFailed": "Не удалось настроить пресет провайдера",
     "welcome.setupBadge": "Настройка",
-    "welcome.finish": "Начать работу с Vellium",
+    "welcome.finish": "Начать работу с Indium",
     "welcome.saving": "Сохранение...",
 
     // Tabs
@@ -1510,7 +1510,7 @@ export const translations = {
     "agents.newAskThreadDefault": "Ask workspace",
     "agents.newBuildThreadDefault": "Build workspace",
     "agents.newResearchThreadDefault": "Research workspace",
-    "agents.defaultSystemPrompt": "Ты Vellium Agent, фирменный автономный оператор внутри Vellium. Работай кратко, предметно и явно отмечай неопределённость.",
+    "agents.defaultSystemPrompt": "Ты Indium Agent, фирменный автономный оператор внутри Indium. Работай кратко, предметно и явно отмечай неопределённость.",
     "agents.threadCreated": "Агентный поток создан",
     "agents.threadSaved": "Агентный поток сохранён",
     "agents.threadDeleted": "Агентный поток удалён",
@@ -2117,7 +2117,7 @@ export const translations = {
     "chars.agentInstructionsPlaceholder": "Опишите, как этот герой должен планировать, отвечать, делегировать и использовать tools внутри Agents workspace.",
     "chars.agentSkills": "Skills героя",
     "chars.agentSkillsCount": "skills",
-    "chars.agentSkillsEmpty": "Пока нет hero-specific skills. Добавьте несколько узких skills, если этот агент должен вести себя заметно иначе, чем базовый runtime Vellium.",
+    "chars.agentSkillsEmpty": "Пока нет hero-specific skills. Добавьте несколько узких skills, если этот агент должен вести себя заметно иначе, чем базовый runtime Indium.",
     "chars.agentWorkspaceSummaryDesc": "Этот профиль инициализирует связанные workspace своим режимом, памятью и hero-specific skills.",
     "chars.agentEditorHintTitle": "Agent-first настройка",
     "chars.agentEditorHint": "Сейчас этот профиль собирается именно под Agents workspace.",
@@ -2305,8 +2305,8 @@ export const translations = {
     "settings.pluginPermissionsEnableHint": "Сначала сохраните выданные разрешения. Сразу после этого плагин будет включен.",
     "settings.pluginPermissionsRuntimeHint": "Разрешения можно отозвать позже. Ограниченные права сразу блокируют соответствующие API плагина.",
     "settings.pluginPermissionDenied": "запрещено",
-    "settings.pluginPermissionHelp.api.read": "Доступ только на чтение к API-маршрутам Vellium.",
-    "settings.pluginPermissionHelp.api.write": "Доступ на запись к API-маршрутам Vellium. Нужен для изменения чатов, персонажей, лорбуков, провайдеров и похожих данных.",
+    "settings.pluginPermissionHelp.api.read": "Доступ только на чтение к API-маршрутам Indium.",
+    "settings.pluginPermissionHelp.api.write": "Доступ на запись к API-маршрутам Indium. Нужен для изменения чатов, персонажей, лорбуков, провайдеров и похожих данных.",
     "settings.pluginPermissionHelp.pluginSettings.read": "Разрешает плагину читать только свои сохраненные настройки.",
     "settings.pluginPermissionHelp.pluginSettings.write": "Разрешает плагину записывать только свои сохраненные настройки.",
     "settings.pluginPermissionHelp.host.resize": "Разрешает плагину менять высоту iframe для встроенного интерфейса.",
@@ -2648,8 +2648,8 @@ export const translations = {
   },
   zh: {
     // App
-    "app.name": "Vellium",
-    "welcome.title": "欢迎使用 Vellium",
+    "app.name": "Indium",
+    "welcome.title": "欢迎使用 Indium",
     "welcome.subtitle": "先完成首次启动的基础设置。",
     "welcome.interfaceLanguage": "界面语言",
     "welcome.responseLanguage": "回复语言",
@@ -2677,7 +2677,7 @@ export const translations = {
     "welcome.presetSkipHint": "现在不会创建提供商，之后可在设置中添加。",
     "welcome.presetSetupFailed": "提供商预设设置失败",
     "welcome.setupBadge": "设置",
-    "welcome.finish": "开始使用 Vellium",
+    "welcome.finish": "开始使用 Indium",
     "welcome.saving": "保存中...",
 
     // Tabs
@@ -3235,8 +3235,8 @@ export const translations = {
     "settings.pluginPermissionsEnableHint": "先保存权限授予，随后该插件会立即启用。",
     "settings.pluginPermissionsRuntimeHint": "以后仍可撤销权限。被限制的权限会立即阻止对应的插件 API 调用。",
     "settings.pluginPermissionDenied": "已拒绝",
-    "settings.pluginPermissionHelp.api.read": "对 Vellium API 路由的只读访问。",
-    "settings.pluginPermissionHelp.api.write": "对 Vellium API 路由的写入访问。用于修改聊天、角色、LoreBook、提供商等数据。",
+    "settings.pluginPermissionHelp.api.read": "对 Indium API 路由的只读访问。",
+    "settings.pluginPermissionHelp.api.write": "对 Indium API 路由的写入访问。用于修改聊天、角色、LoreBook、提供商等数据。",
     "settings.pluginPermissionHelp.pluginSettings.read": "允许插件读取它自己的已保存设置。",
     "settings.pluginPermissionHelp.pluginSettings.write": "允许插件写入它自己的已保存设置。",
     "settings.pluginPermissionHelp.host.resize": "允许插件为嵌入式界面请求 iframe 高度调整。",
@@ -3513,8 +3513,8 @@ export const translations = {
   },
   ja: {
     // App
-    "app.name": "Vellium",
-    "welcome.title": "Vellium へようこそ",
+    "app.name": "Indium",
+    "welcome.title": "Indium へようこそ",
     "welcome.subtitle": "初回起動の基本設定を行います。",
     "welcome.interfaceLanguage": "インターフェース言語",
     "welcome.responseLanguage": "応答言語",
@@ -3542,7 +3542,7 @@ export const translations = {
     "welcome.presetSkipHint": "今はプロバイダーを作成しません。後で Settings から追加できます。",
     "welcome.presetSetupFailed": "プロバイダープリセットの設定に失敗しました",
     "welcome.setupBadge": "設定",
-    "welcome.finish": "Vellium を開始",
+    "welcome.finish": "Indium を開始",
     "welcome.saving": "保存中...",
 
     // Tabs
@@ -4100,8 +4100,8 @@ export const translations = {
     "settings.pluginPermissionsEnableHint": "先に権限を保存してください。その直後にプラグインを有効化します。",
     "settings.pluginPermissionsRuntimeHint": "権限は後から取り消せます。制限された権限は対応するプラグイン API を即座にブロックします。",
     "settings.pluginPermissionDenied": "拒否",
-    "settings.pluginPermissionHelp.api.read": "Vellium API ルートへの読み取り専用アクセスです。",
-    "settings.pluginPermissionHelp.api.write": "Vellium API ルートへの書き込みアクセスです。チャット、キャラクター、LoreBook、プロバイダーなどの変更に必要です。",
+    "settings.pluginPermissionHelp.api.read": "Indium API ルートへの読み取り専用アクセスです。",
+    "settings.pluginPermissionHelp.api.write": "Indium API ルートへの書き込みアクセスです。チャット、キャラクター、LoreBook、プロバイダーなどの変更に必要です。",
     "settings.pluginPermissionHelp.pluginSettings.read": "プラグイン自身の保存済み設定の読み取りを許可します。",
     "settings.pluginPermissionHelp.pluginSettings.write": "プラグイン自身の保存済み設定の書き込みを許可します。",
     "settings.pluginPermissionHelp.host.resize": "埋め込み UI の iframe 高さ変更要求を許可します。",

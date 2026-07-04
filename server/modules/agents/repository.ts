@@ -19,7 +19,7 @@ type AgentHeroProfile = {
 };
 
 const DEFAULT_AGENT_SYSTEM_PROMPT = [
-  "You are Vellium Agent, a first-party autonomous operator inside Vellium.",
+  "You are Indium Agent, a first-party autonomous operator inside Indium.",
   "Be concise, execution-focused, and explicit about uncertainty.",
   "Prefer concrete progress over generic advice.",
   "Use skills intentionally, use tools when they materially improve accuracy, and use subagents only for bounded side tasks."
@@ -221,7 +221,7 @@ function buildHeroSystemPrompt(character: {
     DEFAULT_AGENT_SYSTEM_PROMPT,
     `Operating mode: ${AGENT_MODE_LABELS[mode]}.`
   ];
-  if (character.name) lines.push(`You are operating as ${character.name} inside Vellium.`);
+  if (character.name) lines.push(`You are operating as ${character.name} inside Indium.`);
   if (character.description) lines.push(`Hero description: ${character.description}`);
   if (character.personality) lines.push(`Hero personality: ${character.personality}`);
   if (character.scenario) lines.push(`Hero scenario: ${character.scenario}`);
@@ -254,7 +254,7 @@ function getHeroSeed(characterId: string | null | undefined) {
   if (!row) return null;
   const cardData = parseCardData(row.card_json);
   const extensions = parseRecord(cardData.extensions);
-  const profile = parseAgentHeroProfile(extensions.vellium_agent);
+  const profile = parseAgentHeroProfile(extensions.indium_agent);
   return {
     ...row,
     profile

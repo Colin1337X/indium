@@ -53,13 +53,13 @@ describe("appendMissingToolImageMarkdown", () => {
     expect(augmented.appended).toBe("");
   });
 
-  it("extracts markdown images from structured vellium media results", () => {
+  it("extracts markdown images from structured indium media results", () => {
     const toolTraces: ToolCallTrace[] = [{
       callId: "tool-1",
       name: "mcp_comfyui__generate_image",
       args: "{\"prompt\":\"test\"}",
       result: JSON.stringify({
-        kind: "vellium_media_result",
+        kind: "indium_media_result",
         summary: "Image created and shown to the user.",
         media: [{
           type: "image",

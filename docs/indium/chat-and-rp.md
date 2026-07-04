@@ -1,6 +1,6 @@
 # Chat and RP
 
-`Chat` is the central workspace in Vellium. It is where the active model, characters, LoreBooks, knowledge collections, translation, TTS, tool calling, and RP modes all meet.
+`Chat` is the central workspace in Indium. It is where the active model, characters, LoreBooks, knowledge collections, translation, TTS, tool calling, and RP modes all meet.
 
 The screenshots below use `Simple Mode`, because that is the cleanest first-run view for most users.
 
@@ -63,7 +63,7 @@ Use it when you need:
 
 ### Multi-character chat
 
-Vellium can hold several characters inside one scene. In multi-character mode you can:
+Indium can hold several characters inside one scene. In multi-character mode you can:
 
 - assemble multiple characters in one chat
 - change their order
@@ -75,7 +75,7 @@ This is especially useful for RP groups, dialogue-heavy scenes, and worldbuildin
 
 ## Message Management
 
-For messages and branches Vellium supports:
+For messages and branches Indium supports:
 
 - `Regenerate`
 - `Edit`
@@ -114,7 +114,7 @@ The inspector controls the hidden context and RP parameters of the chat. Typical
 
 ### Chat Mode
 
-Vellium supports several behavior profiles:
+Indium supports several behavior profiles:
 
 - `Full RP`
 - `Light RP`

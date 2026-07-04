@@ -135,7 +135,7 @@ export interface PluginCatalog {
 }
 
 export interface PluginfileDocument {
-  format: "vellium-pluginfile@1";
+  format: "indium-pluginfile@1";
   manifest: Record<string, unknown>;
   files: Record<string, string>;
 }

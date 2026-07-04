@@ -178,7 +178,7 @@ function extractStructuredToolResultImages(text: string): StructuredToolResultMe
       kind?: unknown;
       media?: Array<{ type?: unknown; markdown?: unknown; url?: unknown }>;
     };
-    if (parsed.kind !== "vellium_media_result" || !Array.isArray(parsed.media)) return [];
+    if (parsed.kind !== "indium_media_result" || !Array.isArray(parsed.media)) return [];
     return parsed.media
       .map((item) => {
         const markdown = String(item?.markdown || "").trim();

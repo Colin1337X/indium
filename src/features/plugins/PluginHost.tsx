@@ -23,7 +23,7 @@ interface PluginActionStatus {
   text: string;
 }
 
-const PLUGIN_DEV_AUTO_REFRESH_STORAGE_KEY = "vellium:plugin-dev-auto-refresh";
+const PLUGIN_DEV_AUTO_REFRESH_STORAGE_KEY = "indium:plugin-dev-auto-refresh";
 
 interface PluginRuntimeValue {
   catalog: PluginCatalog | null;
@@ -126,7 +126,7 @@ async function performPluginApiRequestFor(plugin: PluginDescriptor | null, metho
 
 function postMessageToFrame(frame: HTMLIFrameElement | null, payload: Record<string, unknown>) {
   // Opaque sandboxed plugin frames cannot be targeted by this page's origin string.
-  frame?.contentWindow?.postMessage({ __velliumHost: true, ...payload }, "*");
+  frame?.contentWindow?.postMessage({ __indiumHost: true, ...payload }, "*");
 }
 
 function readPluginDevAutoRefreshPreference(): boolean {

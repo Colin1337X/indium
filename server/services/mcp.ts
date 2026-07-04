@@ -349,14 +349,14 @@ function extractSpecialToolExecutionResult(result: unknown): { modelText: string
     : null;
   if (!structured) return null;
 
-  const vellium = structured.vellium && typeof structured.vellium === "object" && !Array.isArray(structured.vellium)
-    ? structured.vellium as Record<string, unknown>
+  const indium = structured.indium && typeof structured.indium === "object" && !Array.isArray(structured.indium)
+    ? structured.indium as Record<string, unknown>
     : null;
-  const media = normalizeToolMediaItems(vellium?.media ?? structured.media ?? structured.images);
+  const media = normalizeToolMediaItems(indium?.media ?? structured.media ?? structured.images);
   if (media.length === 0) return null;
 
   const summary = String(
-    vellium?.summary
+    indium?.summary
     ?? structured.summary
     ?? "Image created and shown to the user."
   ).trim() || "Image created and shown to the user.";
@@ -364,7 +364,7 @@ function extractSpecialToolExecutionResult(result: unknown): { modelText: string
   return {
     modelText: summary,
     traceText: JSON.stringify({
-      kind: "vellium_media_result",
+      kind: "indium_media_result",
       summary,
       media
     })
@@ -435,7 +435,7 @@ class McpStdioClient {
     await this.request("initialize", {
       protocolVersion: MCP_PROTOCOL_VERSION,
       capabilities: {},
-      clientInfo: { name: "vellium", version: "0.2.0" }
+      clientInfo: { name: "indium", version: "0.2.0" }
     }, timeout, signal);
     this.notify("notifications/initialized", {});
   }

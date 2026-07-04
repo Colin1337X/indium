@@ -987,7 +987,7 @@ process.stdin.on("data", (chunk) => {
             res.end();
             return;
           }
-          if (promptText.includes("Write the final user-facing assistant reply for this Vellium agent thread.")) {
+          if (promptText.includes("Write the final user-facing assistant reply for this Indium agent thread.")) {
             const streamedSynthesis = promptText.includes("repair-loop-agent-task")
               ? "I updated the requested files and stopped the malformed planner loop instead of spinning."
               : promptText.includes("Tool result for: latest context")
@@ -1018,17 +1018,17 @@ process.stdin.on("data", (chunk) => {
           return;
           }
 
-          const content = promptText.includes("Write the final user-facing assistant reply for this Vellium agent thread.")
+          const content = promptText.includes("Write the final user-facing assistant reply for this Indium agent thread.")
           ? (promptText.includes("repair-loop-agent-task")
             ? "I updated the requested files and stopped the malformed planner loop instead of spinning."
             : promptText.includes("Tool result for: latest context")
               ? "FINAL AGENT TOOL ANSWER"
               : "FINAL AGENT ANSWER")
-          : promptText.includes("Update the durable memory for this Vellium agent thread.")
+          : promptText.includes("Update the durable memory for this Indium agent thread.")
             ? (promptText.includes("Tool result for: latest context")
               ? "Keep latest context findings, note that tool-backed verification was already completed, and continue from the validated result."
               : "Keep the current user goal, active constraints, and the latest completed result ready for follow-up runs.")
-          : promptText.includes("You are the Vellium Agent runtime.")
+          : promptText.includes("You are the Indium Agent runtime.")
             ? (() => {
               if (promptText.includes("slow-agent-run")) {
                 if (promptText.includes("Resume the previous run")) {
@@ -2838,7 +2838,7 @@ process.stdin.on("data", (chunk) => {
     expect(enabledState.events.some((event: { type: string; content: string }) => (
       event.type === "tool_result"
       && String(event.content || "").includes("Command: node -p")
-      && String(event.content || "").includes("vellium")
+      && String(event.content || "").includes("indium")
     ))).toBe(true);
 
     await updateSettings({
@@ -3025,11 +3025,11 @@ process.stdin.on("data", (chunk) => {
           name: "Systems Hero",
           description: "A pragmatic operator who ships carefully.",
           personality: "Calm, technical, skeptical",
-          scenario: "Working inside the Vellium agents workspace",
+          scenario: "Working inside the Indium agents workspace",
           system_prompt: "Prefer explicit tradeoffs.",
           tags: ["ops"],
           extensions: {
-            vellium_agent: {
+            indium_agent: {
               enabled: true,
               mode: "research",
               customInstructions: "Always compare two strong approaches before deciding.",

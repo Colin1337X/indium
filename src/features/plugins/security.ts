@@ -39,7 +39,7 @@ export function isTrustedPluginFrameMessage(
   frameId: string
 ): boolean {
   const msg = event.data as Record<string, unknown> | null;
-  if (!msg || msg.__velliumPlugin !== true) return false;
+  if (!msg || msg.__indiumPlugin !== true) return false;
   if (!frameSource || event.source !== frameSource) return false;
   if (event.origin !== expectedOrigin && event.origin !== "null") return false;
   return String(msg.pluginId || "").trim() === pluginId && String(msg.frameId || "").trim() === frameId;

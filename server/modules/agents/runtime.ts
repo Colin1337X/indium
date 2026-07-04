@@ -1595,7 +1595,7 @@ function buildDirectReplyMessages(params: {
   const environmentContextNote = buildEnvironmentContextNote(params.threadId);
   const enabledSkillInstructions = buildEnabledSkillInstructions(params.threadId);
   const baseSystemPrompt = [
-    "You are Vellium Agent.",
+    "You are Indium Agent.",
     thread?.systemPrompt || ""
   ].filter(Boolean).join("\n");
   const developerMessage = buildDeveloperMessage(params.threadId, [
@@ -1658,7 +1658,7 @@ function buildDirectToolLoopMessages(params: {
   const enabledSkillInstructions = buildEnabledSkillInstructions(params.threadId);
   const toolCatalog = buildToolCatalog(params.tools || []);
   const baseSystemPrompt = [
-    "You are Vellium Agent operating inside a selectable workspace.",
+    "You are Indium Agent operating inside a selectable workspace.",
     thread?.systemPrompt || ""
   ].filter(Boolean).join("\n");
   const developerMessage = buildDeveloperMessage(params.threadId, [
@@ -1805,7 +1805,7 @@ function buildPlannerMessages(params: {
   const environmentContextNote = buildEnvironmentContextNote(params.threadId);
 
   const runtimePrompt = [
-    "You are the Vellium Agent runtime.",
+    "You are the Indium Agent runtime.",
     thread?.systemPrompt || "",
     "",
     "Available skills:",
@@ -1908,7 +1908,7 @@ function buildSynthesisMessages(params: {
   const projectInstructionsNote = buildProjectInstructionsNote(params.threadId);
   const environmentContextNote = buildEnvironmentContextNote(params.threadId);
   const baseSystemPrompt = [
-    "Write the final user-facing assistant reply for this Vellium agent thread.",
+    "Write the final user-facing assistant reply for this Indium agent thread.",
     thread?.systemPrompt || "",
     modePolicy,
     "Use the gathered scratchpad and keep the answer concise, concrete, and helpful."
@@ -1980,7 +1980,7 @@ function buildMemoryMessages(params: {
   const currentMemory = buildMemoryNote(params.threadId);
   const environmentContextNote = buildEnvironmentContextNote(params.threadId);
   const baseSystemPrompt = [
-    "Update the durable memory for this Vellium agent thread.",
+    "Update the durable memory for this Indium agent thread.",
     thread?.systemPrompt || "",
     "Write plain text only.",
     "Keep only durable context that should influence future runs: stable user preferences, important decisions, artifacts in progress, constraints, tool findings worth keeping, and unresolved next steps.",

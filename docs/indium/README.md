@@ -1,8 +1,8 @@
-# Vellium User Guide
+# Indium User Guide
 
-![Vellium icon](../vellium-icon.png)
+![Indium icon](../indium-icon.png)
 
-Vellium is a local-first desktop/workbench app for:
+Indium is a local-first desktop/workbench app for:
 
 - AI chat and RP workflows
 - long-form writing workflows
@@ -31,7 +31,7 @@ The screenshots in this guide are local captures from the current app build. Whe
 | [plugins-and-security.md](./plugins-and-security.md) | Plugin management, permissions, Pluginfile, themes, and safe usage guidelines |
 | [troubleshooting.md](./troubleshooting.md) | Common failures, diagnostics, and a practical fallback plan |
 
-## How Vellium Fits Together
+## How Indium Fits Together
 
 ```mermaid
 flowchart LR
@@ -75,12 +75,12 @@ flowchart LR
 
 ## Important Things to Know Up Front
 
-- Vellium is not tied to a single backend. Chat, translation, compression, TTS, and RAG can all use different models.
+- Indium is not tied to a single backend. Chat, translation, compression, TTS, and RAG can all use different models.
 - `Local-only mode` limits the app to localhost or private-network endpoints.
 - Tool calling through MCP only works with OpenAI-compatible chat/completions providers, not with KoboldCpp.
 - Agents can use first-party workspace tools when enabled. Command execution, network commands, destructive file operations, and git writes are separately gated in settings.
 - `Knowledge` and `LoreBooks` solve different problems: one is retrieval-based, the other is trigger-based scripted context.
-- Plugins in Vellium are local extensions. Treat their permissions the same way you would treat shell tools or third-party scripts.
+- Plugins in Indium are local extensions. Treat their permissions the same way you would treat shell tools or third-party scripts.
 
 ## Screenshot Notes
 

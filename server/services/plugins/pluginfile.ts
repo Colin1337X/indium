@@ -15,7 +15,7 @@ export function exportPluginfile(pluginId: string): PluginfileDocument | null {
     files[assetPath] = readFileSync(resolved, "utf-8");
   }
   return {
-    format: "vellium-pluginfile@1",
+    format: "indium-pluginfile@1",
     manifest: buildPluginfileManifest(plugin),
     files
   };

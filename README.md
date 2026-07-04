@@ -1,4 +1,4 @@
-# Vellium
+# Indium
 
 <p align="center">
   <img width="1439" height="854" alt="image" src="https://github.com/user-attachments/assets/b4f68d1a-1c12-4abc-b810-1280f3ef49cb" />
@@ -11,14 +11,14 @@ Desktop app built with Electron, React, a local Express API, and SQLite.
 
 ## Current Release
 
-- Latest release: [`v0.9.7`](https://github.com/tg-prplx/vellium/releases/tag/v0.9.7)
+- Latest release: [`v0.9.7`](https://github.com/tg-prplx/indium/releases/tag/v0.9.7)
 - Desktop builds: macOS (`arm64`, `x64`), Windows (`x64`), Linux (`x64` AppImage).
 - Release builds are unsigned. macOS and Windows may require manual confirmation on first launch.
 - The app is usable day to day, but still moving quickly. Expect active iteration around Agents, tool calling, and provider compatibility.
 
 ## User Documentation
 
-- Detailed user guide: [`docs/vellium/README.md`](./docs/vellium/README.md)
+- Detailed user guide: [`docs/indium/README.md`](./docs/indium/README.md)
 
 
 ## Important
@@ -187,7 +187,7 @@ What it does:
 
 ## Plugins
 
-Vellium now has a real plugin system.
+Indium now has a real plugin system.
 
 Plugin capabilities:
 - toolbar tabs,
@@ -222,7 +222,7 @@ Bundled plugins can also be exported as `Pluginfile`.
 
 ## Themes
 
-Vellium supports:
+Indium supports:
 - built-in dark/light themes,
 - plugin-provided themes.
 
@@ -237,10 +237,10 @@ Theme plugins also propagate into plugin UI kit styling.
 
 ## Extensions API
 
-Vellium includes an extensions layer beyond normal plugins:
+Indium includes an extensions layer beyond normal plugins:
 - custom inspector fields,
 - custom endpoint adapters,
-- unified plugin-side backend access through `vellium.generate(...)` and related SDK namespaces.
+- unified plugin-side backend access through `indium.generate(...)` and related SDK namespaces.
 
 This makes it possible to:
 - add inspector controls,
@@ -249,7 +249,7 @@ This makes it possible to:
 
 ## TTS
 
-Vellium supports OpenAI-compatible TTS:
+Indium supports OpenAI-compatible TTS:
 - configurable endpoint,
 - model selection,
 - voice selection,
