@@ -623,16 +623,14 @@ select {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(217, 119, 87, 0.03) 25%,
-    rgba(136, 183, 255, 0.04) 50%,
-    rgba(255, 223, 154, 0.03) 75%,
+    rgba(217, 119, 87, 0.02) 30%,
+    rgba(136, 183, 255, 0.02) 60%,
     transparent 100%
   );
-  background-size: 250% 100%;
-  animation: auroraNav 12s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -677,7 +675,8 @@ select {
 }
 
 .app-tab-button.is-active::after {
-  width: 84%;
+  width: 60%;
+  opacity: 1;
 }
 
 .desktop-pet-control {

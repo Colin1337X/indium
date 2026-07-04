@@ -68,7 +68,10 @@ function discoverPluginsWithCache(force: boolean): PluginDiscoveryCache {
         const manifest = normalizeManifest(pluginfile ? pluginfile.manifest : raw, entry.name);
         if (!manifest) continue;
         const assetBaseUrl = `/api/plugins/${encodeURIComponent(manifest.id)}/assets`;
-        const enabled = configuredStates[manifest.id] === true && states[manifest.id] === true;
+        const isConfigured = configuredStates[manifest.id] === true;
+        const enabled = isConfigured
+          ? states[manifest.id] === true
+          : manifest.defaultEnabled === true;
         const requestedPermissions = [...manifest.permissions];
         const storedGrants = permissionGrants[manifest.id];
         const permissionsConfigured = !!storedGrants;
