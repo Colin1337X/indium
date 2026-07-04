@@ -64,6 +64,7 @@ export function WritingScreen() {
   const [renamingChapterId, setRenamingChapterId] = useState<string | null>(null);
   const [renamingChapterTitle, setRenamingChapterTitle] = useState("");
   const [chapterDynamicsCollapsed, setChapterDynamicsCollapsed] = useState(false);
+  const [docxImportCollapsed, setDocxImportCollapsed] = useState(true);
   const [rightSidebarTab, setRightSidebarTab] = useState<"planning" | "lenses" | "diagnostics">("planning");
   const [bookBibleCollapsed, setBookBibleCollapsed] = useState(false);
   const [lensesCollapsed, setLensesCollapsed] = useState(false);
@@ -1215,14 +1216,20 @@ export function WritingScreen() {
             />
           </div>
 
-          <div className="rounded-lg border border-border-subtle bg-bg-primary p-2.5">
-            <button
-              onClick={openDocxPicker}
-              disabled={busy || (!docxImportAsBook && !activeProject)}
-              className="w-full rounded-md border border-border px-2 py-1 text-[11px] font-semibold text-text-secondary hover:bg-bg-hover disabled:opacity-40"
-            >
-              {docxImportAsBook ? t("writing.importDocxAsBook") : t("writing.importDocx")}
-            </button>
+          <CollapsibleSection
+            title={t("writing.importDocx")}
+            collapsed={docxImportCollapsed}
+            onToggle={() => setDocxImportCollapsed((prev) => !prev)}
+            action={
+              <button
+                onClick={openDocxPicker}
+                disabled={busy || (!docxImportAsBook && !activeProject)}
+                className="rounded-md bg-bg-hover px-2 py-0.5 text-[10px] font-medium text-text-secondary hover:text-text-primary disabled:opacity-40"
+              >
+                {t("writing.importDocx")}
+              </button>
+            }
+          >
             <input
               ref={docxImportInputRef}
               type="file"
@@ -1233,7 +1240,7 @@ export function WritingScreen() {
                 void handleDocxImport(file);
               }}
             />
-            <div className="mt-1.5 grid grid-cols-1 gap-1">
+            <div className="grid grid-cols-1 gap-1.5">
               <label className="text-[10px] text-text-tertiary">
                 {t("writing.docxParseMode")}
                 <select
@@ -1263,7 +1270,7 @@ export function WritingScreen() {
                 />
               )}
             </div>
-          </div>
+          </CollapsibleSection>
 
           <div className="list-animate min-h-0 flex-1 space-y-1 overflow-y-auto">
             {projects.length === 0 ? (
@@ -1366,7 +1373,7 @@ export function WritingScreen() {
 
           <div className="float-card rounded-lg border border-border-subtle bg-bg-primary p-3">
             <div className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">{t("writing.chapters")}</div>
-            <div className="max-h-40 space-y-1 overflow-y-auto">
+            <div className="max-h-56 space-y-1 overflow-y-auto">
               {chapters.map((ch) => {
                 const isRenaming = renamingChapterId === ch.id;
                 return (
