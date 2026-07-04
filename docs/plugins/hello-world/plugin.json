@@ -3,7 +3,7 @@
   "name": "Hello World",
   "version": "0.1.0",
   "description": "Example plugin tab and chat inspector widget.",
-  "author": "Vellium",
+  "author": "Indium",
   "defaultEnabled": true,
   "permissions": ["api.read", "pluginSettings.read", "pluginSettings.write", "host.resize"],
   "tabs": [

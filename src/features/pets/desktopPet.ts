@@ -54,8 +54,8 @@ export type DesktopPetExtension = {
   chatContextTokenLimit?: number;
 };
 
-export const DESKTOP_PET_STORAGE_KEY = "vellium.desktopPet.config";
-export const DESKTOP_PET_EXTENSION_KEY = "velliumPet";
+export const DESKTOP_PET_STORAGE_KEY = "indium.desktopPet.config";
+export const DESKTOP_PET_EXTENSION_KEY = "indiumPet";
 const DESKTOP_PET_THEME_VARIABLES = [
   "--color-bg-primary",
   "--color-bg-secondary",

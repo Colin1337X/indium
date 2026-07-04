@@ -38,7 +38,7 @@ export {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const PLUGIN_SDK_SOURCE = `(() => {
-  const UI_STYLE_ID = 'vellium-plugin-ui';
+  const UI_STYLE_ID = 'indium-plugin-ui';
   const PLUGIN_ID = new URLSearchParams(window.location.search).get('pluginId') || '';
   const FRAME_ID = new URLSearchParams(window.location.search).get('frameId') || '';
   const HOST_ORIGIN = (() => {
@@ -75,7 +75,7 @@ export const PLUGIN_SDK_SOURCE = `(() => {
   --vp-radius-sm: 10px;
 }
 
-:root[data-vellium-theme="light"] {
+:root[data-indium-theme="light"] {
   color-scheme: light;
   --vp-bg-primary: #f5f4f2;
   --vp-bg-secondary: #eeede9;
@@ -287,7 +287,7 @@ body.vp-body {
   }
   function applyTheme(theme, variables) {
     const nextTheme = theme === 'light' ? 'light' : 'dark';
-    document.documentElement.dataset.velliumTheme = nextTheme;
+    document.documentElement.dataset.indiumTheme = nextTheme;
     clearAppliedThemeVariables();
     if (variables && typeof variables === 'object') {
       for (const [key, value] of Object.entries(variables)) {
@@ -301,7 +301,7 @@ body.vp-body {
   }
   function post(type, payload = {}) {
     window.parent.postMessage(
-      { __velliumPlugin: true, pluginId: PLUGIN_ID, frameId: FRAME_ID, type, ...payload },
+      { __indiumPlugin: true, pluginId: PLUGIN_ID, frameId: FRAME_ID, type, ...payload },
       HOST_ORIGIN === 'null' ? '*' : HOST_ORIGIN
     );
   }
@@ -321,7 +321,7 @@ body.vp-body {
     if (HOST_ORIGIN !== '*' && event.origin !== HOST_ORIGIN) return;
     if (event.source !== window.parent) return;
     const msg = event.data;
-    if (!msg || msg.__velliumHost !== true) return;
+    if (!msg || msg.__indiumHost !== true) return;
     if (msg.type === 'context') {
       applyTheme(msg.context?.theme, msg.context?.themeVariables);
       const pendingRequest = msg.requestId ? pending.get(msg.requestId) : null;
@@ -421,7 +421,7 @@ body.vp-body {
       }
     }, null, 2);
   }
-  const vellium = {
+  const indium = {
     generate(input = {}) {
       return api.post('/api/plugin-runtime/generate', input);
     },
@@ -507,7 +507,7 @@ body.vp-body {
         return api.post('/api/characters/import', { rawJson: String(rawJson || '') });
       },
       createBlank(input = {}) {
-        return vellium.characters.importCard(buildBlankCharacterCard(input));
+        return indium.characters.importCard(buildBlankCharacterCard(input));
       },
       update(id, patch) {
         return api.put('/api/characters/' + encodeURIComponent(id), patch || {});
@@ -590,7 +590,7 @@ body.vp-body {
       divider: 'vp-divider'
     }
   };
-  window.VelliumPlugin = { api, host, settings, permissions, ui, vellium };
+  window.IndiumPlugin = { api, host, settings, permissions, ui, indium };
   ensureUiStyles();
   applyTheme(new URLSearchParams(window.location.search).get('hostTheme'));
   if (document.readyState === 'loading') {

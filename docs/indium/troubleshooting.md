@@ -1,6 +1,6 @@
 # Troubleshooting
 
-This section helps you diagnose the most common Vellium problems quickly.
+This section helps you diagnose the most common Indium problems quickly.
 
 ## Fast triage checklist
 
@@ -27,7 +27,7 @@ Check these first:
 | A LoreBook does not affect the scene | The LoreBook is not attached, keys do not trigger, or the entry is disabled | Check the selected LoreBook in `Chat`, the `Keys`, `Enabled`, `Constant`, and `Position` |
 | TTS does not play | TTS provider / model / voice is not configured | Open the TTS block in `Settings` and assign endpoint, model, and voice |
 
-## If Vellium does not start from the repository
+## If Indium does not start from the repository
 
 Check:
 
@@ -125,7 +125,7 @@ Before doing that, it is wise to:
 
 ## Recommended fallback plan
 
-If Vellium behaves unpredictably:
+If Indium behaves unpredictably:
 
 1. Disable plugins.
 2. Disable tool calling.

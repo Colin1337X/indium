@@ -1,5 +1,5 @@
 {
-  "name": "vellium",
+  "name": "indium",
   "private": true,
   "version": "0.9.8",
   "type": "module",
@@ -87,8 +87,8 @@
     }
   },
   "build": {
-    "appId": "com.vellium.app",
-    "productName": "Vellium",
+    "appId": "com.indium.app",
+    "productName": "Indium",
     "directories": {
       "output": "release",
       "buildResources": "build"

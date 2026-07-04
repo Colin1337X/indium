@@ -1,4 +1,4 @@
-# Vellium Plugin Base
+# Indium Plugin Base
 
 Plugin folders live in the runtime plugins directory reported by `Settings -> Plugins`.
 Bundled plugins ship with the app from the bundled plugins directory and can be enabled/disabled the same way.
@@ -14,13 +14,13 @@ my-plugin/
 
 ## Pluginfile
 
-`Pluginfile` is the portable single-file distribution format for Vellium plugins.
+`Pluginfile` is the portable single-file distribution format for Indium plugins.
 
 It bundles the manifest and referenced asset files into one JSON document:
 
 ```json
 {
-  "format": "vellium-pluginfile@1",
+  "format": "indium-pluginfile@1",
   "manifest": {
     "id": "my-plugin",
     "name": "My Plugin",
@@ -123,11 +123,11 @@ Load the host bridge from your plugin page:
 Then use it from page scripts:
 
 ```js
-const ctx = await window.VelliumPlugin.host.getContext();
-const settings = await window.VelliumPlugin.api.get('/api/settings');
-const pluginSettings = await window.VelliumPlugin.settings.get();
-window.VelliumPlugin.host.resize(320);
-window.VelliumPlugin.ui.ensureStyles();
+const ctx = await window.IndiumPlugin.host.getContext();
+const settings = await window.IndiumPlugin.api.get('/api/settings');
+const pluginSettings = await window.IndiumPlugin.settings.get();
+window.IndiumPlugin.host.resize(320);
+window.IndiumPlugin.ui.ensureStyles();
 ```
 
 ## UI kit
@@ -143,39 +143,39 @@ It provides:
 Available helpers:
 
 ```js
-window.VelliumPlugin.ui.ensureStyles();
-window.VelliumPlugin.ui.applyTheme('dark');
-window.VelliumPlugin.ui.classes;
+window.IndiumPlugin.ui.ensureStyles();
+window.IndiumPlugin.ui.applyTheme('dark');
+window.IndiumPlugin.ui.classes;
 ```
 
-## High-level Vellium API
+## High-level Indium API
 
 Plugins do not need to talk to raw backend routes directly anymore. Use the stable
-`window.VelliumPlugin.vellium` namespace instead.
+`window.IndiumPlugin.indium` namespace instead.
 
 ```js
-const { vellium } = window.VelliumPlugin;
+const { indium } = window.IndiumPlugin;
 
-const chats = await vellium.chats.list();
-const created = await vellium.chats.create({ title: "Plugin chat" });
-await vellium.chats.send(created.id, { content: "Hello from plugin" });
+const chats = await indium.chats.list();
+const created = await indium.chats.create({ title: "Plugin chat" });
+await indium.chats.send(created.id, { content: "Hello from plugin" });
 
-const blankCharacter = await vellium.characters.createBlank({
+const blankCharacter = await indium.characters.createBlank({
   name: "Plugin Character",
   description: "Created from plugin"
 });
 
-const lorebooks = await vellium.lorebooks.list();
-const providers = await vellium.providers.list();
+const lorebooks = await indium.lorebooks.list();
+const providers = await indium.providers.list();
 ```
 
 ### Unified generate
 
-Use `vellium.generate()` when your plugin needs model output without caring whether the
+Use `indium.generate()` when your plugin needs model output without caring whether the
 active backend is OpenAI-compatible, KoboldCpp, or a custom adapter.
 
 ```js
-const result = await window.VelliumPlugin.vellium.generate({
+const result = await window.IndiumPlugin.indium.generate({
   systemPrompt: "You are a concise assistant.",
   userPrompt: "Summarize this scene in one paragraph."
 });
@@ -188,7 +188,7 @@ console.log(result.providerType);
 You can also pass explicit messages/provider/model:
 
 ```js
-await window.VelliumPlugin.vellium.generate({
+await window.IndiumPlugin.indium.generate({
   providerId: "local-provider",
   modelId: "my-model",
   messages: [
@@ -203,9 +203,9 @@ await window.VelliumPlugin.vellium.generate({
 Plugins can manage custom endpoint adapters through the unified API:
 
 ```js
-const adapters = await window.VelliumPlugin.vellium.extensions.adapters.list();
+const adapters = await window.IndiumPlugin.indium.extensions.adapters.list();
 
-await window.VelliumPlugin.vellium.extensions.adapters.upsert({
+await window.IndiumPlugin.indium.extensions.adapters.upsert({
   id: "my-backend",
   name: "My Backend",
   description: "Plugin-owned adapter",
@@ -251,7 +251,7 @@ Example:
 <div class="vp-root">
   <section class="vp-hero">
     <h1 class="vp-title">My Plugin</h1>
-    <p class="vp-subtitle">Uses the shared Vellium plugin UI kit.</p>
+    <p class="vp-subtitle">Uses the shared Indium plugin UI kit.</p>
     <div class="vp-actions">
       <button class="vp-button vp-button--accent">Run</button>
       <button class="vp-button">Cancel</button>

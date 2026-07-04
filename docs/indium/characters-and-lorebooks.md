@@ -20,7 +20,7 @@ The separate `Characters` screen exists so you can:
 
 ## Ways to create a character
 
-Vellium supports several paths:
+Indium supports several paths:
 
 - import from a `.json` file
 - paste JSON manually
@@ -30,7 +30,7 @@ Vellium supports several paths:
 This is useful if you:
 
 - migrate cards from another RP tool
-- want to build the character entirely inside Vellium
+- want to build the character entirely inside Indium
 - just need sample data to test the UI quickly
 
 ## What a character card stores
@@ -57,7 +57,7 @@ This covers both basic RP cards and more advanced `chara_card_v2`-style cards.
 
 ## GUI and Raw JSON
 
-The character editor in Vellium is bidirectional:
+The character editor in Indium is bidirectional:
 
 - GUI fields for normal editing
 - a raw JSON panel for exact manual control
@@ -74,7 +74,7 @@ Recommended practice:
 
 ## Alternate Greetings
 
-Vellium supports alternate greetings for one character. You can enter them:
+Indium supports alternate greetings for one character. You can enter them:
 
 - with the `---` separator
 - as a JSON array
@@ -168,7 +168,7 @@ Supported positions include:
 
 ## SillyTavern / World Info compatibility
 
-Vellium explicitly supports:
+Indium explicitly supports:
 
 - world info import and export
 - compatibility with SillyTavern-like world info structures

@@ -1,8 +1,8 @@
 # Plugins and Security
 
-Vellium supports local plugins, plugin tabs, slot widgets, inline actions, plugin settings, and themes. This is one of the most powerful parts of the app, but it also requires discipline around trust and permissions.
+Indium supports local plugins, plugin tabs, slot widgets, inline actions, plugin settings, and themes. This is one of the most powerful parts of the app, but it also requires discipline around trust and permissions.
 
-## What plugins can do in Vellium
+## What plugins can do in Indium
 
 Plugins can add:
 
@@ -13,7 +13,7 @@ Plugins can add:
 - their own permissions
 - interface themes
 
-In other words, a plugin in Vellium is not just a button. It is a real local extension of the app.
+In other words, a plugin in Indium is not just a button. It is a real local extension of the app.
 
 ## Where plugin management lives
 
@@ -46,7 +46,7 @@ For end users, this is the easiest way to move local plugins around.
 
 ## Plugin permissions
 
-Vellium stores requested permissions and granted permissions separately. That is a critical safety mechanism.
+Indium stores requested permissions and granted permissions separately. That is a critical safety mechanism.
 
 From both code and UI, the permissions include at least:
 
@@ -60,11 +60,11 @@ From both code and UI, the permissions include at least:
 
 `api.read`
 
-- the plugin can read Vellium data
+- the plugin can read Indium data
 
 `api.write`
 
-- the plugin can change Vellium data
+- the plugin can change Indium data
 
 `pluginSettings.read / write`
 
@@ -87,7 +87,7 @@ If a plugin asks for `api.write`, treat it like a local script that can change y
 
 ## Bundled vs user plugins
 
-Vellium distinguishes between:
+Indium distinguishes between:
 
 - `bundled` plugins
 - `user` plugins
@@ -120,7 +120,7 @@ For the user this means a plugin may look like:
 
 ## Themes
 
-Vellium supports plugin-provided themes. That means a plugin can add its own visual theme to the available theme list.
+Indium supports plugin-provided themes. That means a plugin can add its own visual theme to the available theme list.
 
 Use this if:
 
@@ -147,7 +147,7 @@ Recommended process:
 
 ## How this relates to the app's security settings
 
-Even if the plugin itself is well-behaved, Vellium's overall safety still depends on:
+Even if the plugin itself is well-behaved, Indium's overall safety still depends on:
 
 - Markdown sanitization
 - external link policy
@@ -163,4 +163,4 @@ If you need documentation about the manifest structure, SDK, slot IDs, or plugin
 
 - [../plugins/README.md](../plugins/README.md)
 
-This page in the Vellium guide is focused on using plugins safely, not on authoring them.
+This page in the Indium guide is focused on using plugins safely, not on authoring them.

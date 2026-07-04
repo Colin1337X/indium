@@ -288,7 +288,7 @@ export function collectManifestAssetPaths(manifest: PluginManifest): string[] {
 export function normalizePluginfile(raw: unknown): PluginfileDocument | null {
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
   const row = raw as Record<string, unknown>;
-  if (String(row.format || "").trim() !== "vellium-pluginfile@1") return null;
+  if (String(row.format || "").trim() !== "indium-pluginfile@1") return null;
   const manifest = row.manifest && typeof row.manifest === "object" && !Array.isArray(row.manifest)
     ? row.manifest as Record<string, unknown>
     : null;
@@ -311,7 +311,7 @@ export function normalizePluginfile(raw: unknown): PluginfileDocument | null {
   }
 
   return {
-    format: "vellium-pluginfile@1",
+    format: "indium-pluginfile@1",
     manifest,
     files
   };

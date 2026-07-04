@@ -22,7 +22,7 @@ describe("isTrustedPluginFrameMessage", () => {
       origin: "http://localhost:1420",
       source: frameSource,
       data: {
-        __velliumPlugin: true,
+        __indiumPlugin: true,
         pluginId: "hello-world",
         frameId: "plugin-frame:hello-world:default"
       }
@@ -35,7 +35,7 @@ describe("isTrustedPluginFrameMessage", () => {
       origin: "null",
       source: frameSource,
       data: {
-        __velliumPlugin: true,
+        __indiumPlugin: true,
         pluginId: "hello-world",
         frameId: "plugin-frame:hello-world:default"
       }
@@ -47,7 +47,7 @@ describe("isTrustedPluginFrameMessage", () => {
       origin: "http://localhost:1420",
       source: {} as MessageEventSource,
       data: {
-        __velliumPlugin: true,
+        __indiumPlugin: true,
         pluginId: "hello-world",
         frameId: "plugin-frame:hello-world:default"
       }
@@ -60,7 +60,7 @@ describe("isTrustedPluginFrameMessage", () => {
       origin: "http://evil.local",
       source: frameSource,
       data: {
-        __velliumPlugin: true,
+        __indiumPlugin: true,
         pluginId: "hello-world",
         frameId: "plugin-frame:hello-world:default"
       }

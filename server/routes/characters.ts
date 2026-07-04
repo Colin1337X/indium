@@ -352,7 +352,7 @@ function characterToJson(row: CharacterRow) {
     characterVersion: parseString(cardData.character_version),
     creatorNotesMultilingual: parseRecord(cardData.creator_notes_multilingual),
     extensions,
-    agentProfile: parseAgentProfile(extensions.vellium_agent),
+    agentProfile: parseAgentProfile(extensions.indium_agent),
     cardJson: row.card_json,
     createdAt: row.created_at
   };

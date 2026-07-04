@@ -1,10 +1,10 @@
 # Getting Started
 
-This section is for the first launch of Vellium and the first working setup that lets you safely move on to chat, writing, and RAG workflows.
+This section is for the first launch of Indium and the first working setup that lets you safely move on to chat, writing, and RAG workflows.
 
 ## Who This Section Is For
 
-- A user opening Vellium for the first time
+- A user opening Indium for the first time
 - A developer running the project from the repository
 - A power user who wants a local backend up quickly without drowning in settings
 
@@ -12,7 +12,7 @@ This section is for the first launch of Vellium and the first working setup that
 
 ### 1. Use an already built desktop app
 
-If you already have a packaged build of Vellium, launch the app and move straight to `First launch and the Welcome screen`.
+If you already have a packaged build of Indium, launch the app and move straight to `First launch and the Welcome screen`.
 
 ### 2. Run locally from the repository
 
@@ -49,7 +49,7 @@ npm run dist:win
 
 ## First Launch and the Welcome Screen
 
-On first launch Vellium shows an onboarding screen. This is where you define the app's baseline behavior:
+On first launch Indium shows an onboarding screen. This is where you define the app's baseline behavior:
 
 - `Interface Language` for labels and navigation
 - `Response Language` for model output defaults
@@ -74,7 +74,7 @@ If you are unsure:
 
 ## Built-In Provider Presets
 
-Vellium can create a provider profile quickly from either `Welcome` or later in `Settings`.
+Indium can create a provider profile quickly from either `Welcome` or later in `Settings`.
 
 | Preset | When to choose it | Type |
 | --- | --- | --- |
@@ -87,7 +87,7 @@ Vellium can create a provider profile quickly from either `Welcome` or later in 
 
 ## Minimal Working Setup
 
-Opening the app is not enough. Vellium needs a working provider profile and an active model before the main workflows become useful.
+Opening the app is not enough. Indium needs a working provider profile and an active model before the main workflows become useful.
 
 Do this in order:
 
@@ -104,7 +104,7 @@ If the active model is missing, the chat UI will tell you directly.
 
 If your goal is only to confirm that the app works:
 
-1. Start Vellium.
+1. Start Indium.
 2. In `Settings`, choose `OpenAI`, `LM Studio`, `Ollama`, or `KoboldCpp`.
 3. Assign an active model.
 4. Open `Chat`.
@@ -118,7 +118,7 @@ If your goal is only to confirm that the app works:
 
 - only use LM Studio, Ollama, KoboldCpp, or private LAN endpoints
 - want to prevent accidental requests to public APIs
-- test Vellium in a fully local environment
+- test Indium in a fully local environment
 
 Do not enable it if you plan to use public endpoints such as OpenAI or OpenRouter.
 

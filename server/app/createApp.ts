@@ -354,7 +354,7 @@ export function createApp() {
   }));
   app.use((req, res, next) => {
     if (!isAuthorizedByBasicAuth(req)) {
-      res.setHeader("WWW-Authenticate", 'Basic realm="Vellium"');
+      res.setHeader("WWW-Authenticate", 'Basic realm="Indium"');
       res.status(401).send("Authentication required");
       return;
     }

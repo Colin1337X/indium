@@ -312,7 +312,7 @@ export function parseToolResultDisplay(rawResult: string): ParsedToolResultDispl
       summary?: unknown;
       media?: Array<{ type?: unknown; url?: unknown; markdown?: unknown; alt?: unknown }>;
     };
-    if (parsed.kind !== "vellium_media_result" || !Array.isArray(parsed.media)) {
+    if (parsed.kind !== "indium_media_result" || !Array.isArray(parsed.media)) {
       return {
         result: String(rawResult || ""),
         resultSummary: undefined,

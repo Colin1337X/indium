@@ -15,7 +15,7 @@
   <body>
     <div class="card">
       <h1>Hello World Plugin</h1>
-      <p>This plugin tab is running through the Vellium plugin host bridge.</p>
+      <p>This plugin tab is running through the Indium plugin host bridge.</p>
       <button id="load">Load settings via host API</button>
       <pre id="out">Click the button to fetch /api/settings</pre>
     </div>
@@ -23,8 +23,8 @@
       const out = document.getElementById('out');
       document.getElementById('load').addEventListener('click', async () => {
         try {
-          const ctx = await window.VelliumPlugin.host.getContext();
-          const settings = await window.VelliumPlugin.api.get('/api/settings');
+          const ctx = await window.IndiumPlugin.host.getContext();
+          const settings = await window.IndiumPlugin.api.get('/api/settings');
           out.textContent = JSON.stringify({ ctx, theme: settings.theme, provider: settings.activeProviderId }, null, 2);
         } catch (error) {
           out.textContent = String(error);
